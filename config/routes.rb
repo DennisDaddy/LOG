@@ -2,6 +2,14 @@ Rails.application.routes.draw do
 
   
 
+  get 'categories/index'
+
+  get 'categories/edit'
+
+  get 'categories/new'
+
+  get 'categories/show'
+
   root 'static_pages#home'
 
   get  '/help',    to: 'static_pages#help'
