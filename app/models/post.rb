@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
-	attr_accessible :name, :body, :category_id, :author_id
+	validates :title, presence: true
+
 	belongs_to :category
 end

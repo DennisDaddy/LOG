@@ -1,4 +1,5 @@
 class Category < ApplicationRecord
-	attr_accessible :name
+	validates :name
+	
 	has_many :posts
 end
