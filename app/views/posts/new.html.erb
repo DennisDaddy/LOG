@@ -11,7 +11,7 @@
 		</p>
 		
 		<p>
-		  <%= f.select :category_id, Category.all.collect (|x| [x.name, x.id]), (:include_blank => "Select One") %>
+		  <%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]}, (:include_blank => "Select One") %>
 
 		</p>
 
