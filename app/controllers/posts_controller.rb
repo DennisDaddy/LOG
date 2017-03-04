@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def create
-     @post = Post.new(params[:post])
+     @post = Post.new(post_params)
      if @post.save
       redirect_to posts_path, :notice => "Your post has been saved"
     else
@@ -25,7 +25,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
 
-    if @post.update_attributes(params[:post])
+    if @post.update_attributes(post_params)
     
     redirect_to post_path, :notice => "Your post has been updated"
 
@@ -47,5 +47,11 @@ class PostsController < ApplicationController
     @post.destroy
     flash[:success] = "post deleted"
     redirect_to posts_path
+  end
+
+   private
+
+  def post_params
+    params.require(:post).permit(:title, :body, :category_id)
   end
 end
