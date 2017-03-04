@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'posts/index'
+
+  get 'posts/new'
+
+  get 'posts/edit'
+
+  get 'posts/post'
+
+  get 'posts/show'
+
+  get 'posts/destroy'
+
   root 'static_pages#home'
 
   get  '/help',    to: 'static_pages#help'
