@@ -1,16 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'posts/index'
-
-  get 'posts/new'
-
-  get 'posts/edit'
-
-  get 'posts/post'
-
-  get 'posts/show'
-
-  get 'posts/destroy'
+  
 
   root 'static_pages#home'
 
@@ -27,6 +17,7 @@ Rails.application.routes.draw do
    resources :users
    resources :account_activations, only: [:edit]
    resources :password_resets,     only: [:new, :create, :edit, :update]
+   resources :posts
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
