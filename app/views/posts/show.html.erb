@@ -1,6 +1,12 @@
 <h1><%= @post.title %> </h1>
-<small><%= @post.created_at.strftime("%b %d %Y") %></small>
+   <small><%= @post.created_at.strftime("%b %d %Y") %></small>
 <p><%= @post.body %> </p>
+
+ <b>Category:  </b><%= @post.category.name %>
+
+
 <%= link_to "Edit Post", edit_post_path %> | 
 <%= link_to "Delete", @post, method: :delete,
-data: { confirm: "You sure?" } %>
+data: { confirm: "You sure?" } %> <br><br>
+
+<%= link_to "Go Back", posts_path %>
