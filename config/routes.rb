@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   
 
+  get 'home/new'
+
+  get 'home/index'
+
   get 'categories/index'
 
   get 'categories/edit'
