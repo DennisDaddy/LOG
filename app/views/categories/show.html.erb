@@ -1,3 +1,6 @@
- <p><b>Name</b>
-   <%= @category.name %>
-</p>
+<% @posts.each do |post| %>
+
+<h3><%= link_to  post.title, post %> </h3>
+<p><%= post.body %></p>
+
+<% end %> 
