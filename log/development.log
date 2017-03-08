@@ -16866,3 +16866,677 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 108ms (Views: 103.5ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/posts/2" for 127.0.0.1 at 2017-03-08 14:06:56 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 136ms (Views: 99.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-03-08 14:09:55 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (784.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 906ms (Views: 857.4ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:13:39 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A5VnYGmpJxUpFPYYLpdp0L5ZzSqihqtHj3wZulm8SfSLbd5awrzBoc/Lr41fJKhtD0xEHKbSBK00l9ogJkWCRA==", "post_comment"=>{"name"=>"", "email"=>"", "body"=>""}, "commit"=>"Post Comment"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::MissingTemplate (Missing template post_comments/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/kings/code/LOG/app/views"
+):
+  
+app/controllers/post_comments_controller.rb:34:in `block (2 levels) in create'
+app/controllers/post_comments_controller.rb:29:in `create'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (31.9ms)
+Started GET "/posts/2" for 127.0.0.1 at 2017-03-08 14:16:13 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (570.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 635ms (Views: 630.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:16:37 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"azL7KOvioIcPRa4rx9dNJYgnqfmAh62PgvfxjqHXjXTjykISQPdGM+ma9762ZIyYOTIgz4TTAmU5HDIU3i5GxA==", "post_comment"=>{"name"=>"coolman", "email"=>"s@gmai;.com", "body"=>"hahahaha"}, "commit"=>"Post Comment"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::MissingTemplate (Missing template post_comments/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/kings/code/LOG/app/views"
+):
+  
+app/controllers/post_comments_controller.rb:34:in `block (2 levels) in create'
+app/controllers/post_comments_controller.rb:29:in `create'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.7ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (65.3ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:23:01 +0300
+  
+SyntaxError (/home/kings/code/LOG/app/controllers/post_comments_controller.rb:75: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/post_comments_controller.rb:75: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.3ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.6ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:24:19 +0300
+  
+SyntaxError (/home/kings/code/LOG/app/controllers/post_comments_controller.rb:54: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/post_comments_controller.rb:54: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.2ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:24:37 +0300
+  
+SyntaxError (/home/kings/code/LOG/app/controllers/post_comments_controller.rb:54: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/post_comments_controller.rb:54: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.7ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:25:06 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"azL7KOvioIcPRa4rx9dNJYgnqfmAh62PgvfxjqHXjXTjykISQPdGM+ma9762ZIyYOTIgz4TTAmU5HDIU3i5GxA==", "post_comment"=>{"name"=>"coolman", "email"=>"s@gmai;.com", "body"=>"hahahaha"}, "commit"=>"Post Comment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/post_comments_controller.rb:35:in `create'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.6ms)
+Started GET "/posts" for 127.0.0.1 at 2017-03-08 14:25:33 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 89ms (Views: 71.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2017-03-08 14:25:35 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (15.1ms)
+Started GET "/posts/4" for 127.0.0.1 at 2017-03-08 14:25:35 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 108ms (Views: 89.9ms | ActiveRecord: 1.6ms)
+
+
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 113ms (Views: 88.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:26:03 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H2DZBiisfo5xvNMVTsrnJpSKwPFxYh/+MIk3BXk2f/SXmGA8g7mYOpdjioA/eSabJZ9Jx3U2sBSLYvSfBs+0RA==", "post_comment"=>{"name"=>"ki", "email"=>"s@gmail.com", "body"=>"hahahaah"}, "commit"=>"Post Comment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/post_comments_controller.rb:35:in `create'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.1ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.5ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:28:03 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H2DZBiisfo5xvNMVTsrnJpSKwPFxYh/+MIk3BXk2f/SXmGA8g7mYOpdjioA/eSabJZ9Jx3U2sBSLYvSfBs+0RA==", "post_comment"=>{"name"=>"ki", "email"=>"s@gmail.com", "body"=>"hahahaah"}, "commit"=>"Post Comment"}
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `post_comment_params' for #<PostCommentsController:0x0000000637c480>
+Did you mean?  post_comment_path
+               post_comment_url
+               post_comments_path):
+  
+app/controllers/post_comments_controller.rb:4:in `create'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.9ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:28:48 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H2DZBiisfo5xvNMVTsrnJpSKwPFxYh/+MIk3BXk2f/SXmGA8g7mYOpdjioA/eSabJZ9Jx3U2sBSLYvSfBs+0RA==", "post_comment"=>{"name"=>"ki", "email"=>"s@gmail.com", "body"=>"hahahaah"}, "commit"=>"Post Comment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/post_comments_controller.rb:35:in `create'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.6ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:29:37 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H2DZBiisfo5xvNMVTsrnJpSKwPFxYh/+MIk3BXk2f/SXmGA8g7mYOpdjioA/eSabJZ9Jx3U2sBSLYvSfBs+0RA==", "post_comment"=>{"name"=>"ki", "email"=>"s@gmail.com", "body"=>"hahahaah"}, "commit"=>"Post Comment"}
+  [1m[36mPostComment Load (0.2ms)[0m  [1m[34mSELECT  "post_comments".* FROM "post_comments" WHERE "post_comments"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find PostComment with 'id'=):
+  
+app/controllers/post_comments_controller.rb:47:in `set_post_comment'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.8ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:31:33 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H2DZBiisfo5xvNMVTsrnJpSKwPFxYh/+MIk3BXk2f/SXmGA8g7mYOpdjioA/eSabJZ9Jx3U2sBSLYvSfBs+0RA==", "post_comment"=>{"name"=>"ki", "email"=>"s@gmail.com", "body"=>"hahahaah"}, "commit"=>"Post Comment"}
+  [1m[36mPostComment Load (0.2ms)[0m  [1m[34mSELECT  "post_comments".* FROM "post_comments" WHERE "post_comments"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find PostComment with 'id'=):
+  
+app/controllers/post_comments_controller.rb:30:in `set_post_comment'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.7ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:31:54 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H2DZBiisfo5xvNMVTsrnJpSKwPFxYh/+MIk3BXk2f/SXmGA8g7mYOpdjioA/eSabJZ9Jx3U2sBSLYvSfBs+0RA==", "post_comment"=>{"name"=>"ki", "email"=>"s@gmail.com", "body"=>"hahahaah"}, "commit"=>"Post Comment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/post_comments_controller.rb:18:in `create'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.9ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:34:57 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H2DZBiisfo5xvNMVTsrnJpSKwPFxYh/+MIk3BXk2f/SXmGA8g7mYOpdjioA/eSabJZ9Jx3U2sBSLYvSfBs+0RA==", "post_comment"=>{"name"=>"ki", "email"=>"s@gmail.com", "body"=>"hahahaah"}, "commit"=>"Post Comment"}
+  [1m[36mPostComment Load (0.3ms)[0m  [1m[34mSELECT  "post_comments".* FROM "post_comments" WHERE "post_comments"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 9ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find PostComment with 'id'=):
+  
+app/controllers/post_comments_controller.rb:30:in `set_post_comment'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.2ms)
+Started GET "/posts" for 127.0.0.1 at 2017-03-08 14:35:08 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 79ms (Views: 71.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2017-03-08 14:35:11 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (22.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 109ms (Views: 90.0ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:35:27 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hpFfWe0LFyjaliYXdKgPCTU3bJ7Ozd71ZksOz3USogsOaeZjRh7xnDxJf4IFG860hCLlqMqZcR/doM1VCutpuw==", "post_comment"=>{"name"=>"dddddddddd", "email"=>"s@gmail.com", "body"=>"ddddddddddddddd"}, "commit"=>"Post Comment"}
+  [1m[36mPostComment Load (0.1ms)[0m  [1m[34mSELECT  "post_comments".* FROM "post_comments" WHERE "post_comments"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find PostComment with 'id'=):
+  
+app/controllers/post_comments_controller.rb:30:in `set_post_comment'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.6ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:36:32 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hpFfWe0LFyjaliYXdKgPCTU3bJ7Ozd71ZksOz3USogsOaeZjRh7xnDxJf4IFG860hCLlqMqZcR/doM1VCutpuw==", "post_comment"=>{"name"=>"dddddddddd", "email"=>"s@gmail.com", "body"=>"ddddddddddddddd"}, "commit"=>"Post Comment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/post_comments_controller.rb:17:in `create'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.1ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:37:38 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hpFfWe0LFyjaliYXdKgPCTU3bJ7Ozd71ZksOz3USogsOaeZjRh7xnDxJf4IFG860hCLlqMqZcR/doM1VCutpuw==", "post_comment"=>{"name"=>"dddddddddd", "email"=>"s@gmail.com", "body"=>"ddddddddddddddd"}, "commit"=>"Post Comment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"posts"} missing required keys: [:id]):
+  
+app/controllers/post_comments_controller.rb:17:in `create'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.8ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:38:53 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hpFfWe0LFyjaliYXdKgPCTU3bJ7Ozd71ZksOz3USogsOaeZjRh7xnDxJf4IFG860hCLlqMqZcR/doM1VCutpuw==", "post_comment"=>{"name"=>"dddddddddd", "email"=>"s@gmail.com", "body"=>"ddddddddddddddd"}, "commit"=>"Post Comment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"posts"} missing required keys: [:id]):
+  
+app/controllers/post_comments_controller.rb:22:in `create'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.1ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:39:53 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hpFfWe0LFyjaliYXdKgPCTU3bJ7Ozd71ZksOz3USogsOaeZjRh7xnDxJf4IFG860hCLlqMqZcR/doM1VCutpuw==", "post_comment"=>{"name"=>"dddddddddd", "email"=>"s@gmail.com", "body"=>"ddddddddddddddd"}, "commit"=>"Post Comment"}
+  [1m[36mPostComment Load (0.2ms)[0m  [1m[34mSELECT  "post_comments".* FROM "post_comments" WHERE "post_comments"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 9ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find PostComment with 'id'=):
+  
+app/controllers/post_comments_controller.rb:30:in `set_post_comment'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.2ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:41:17 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hpFfWe0LFyjaliYXdKgPCTU3bJ7Ozd71ZksOz3USogsOaeZjRh7xnDxJf4IFG860hCLlqMqZcR/doM1VCutpuw==", "post_comment"=>{"name"=>"dddddddddd", "email"=>"s@gmail.com", "body"=>"ddddddddddddddd"}, "commit"=>"Post Comment"}
+  [1m[36mPostComment Load (0.1ms)[0m  [1m[34mSELECT  "post_comments".* FROM "post_comments" WHERE "post_comments"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find PostComment with 'id'=):
+  
+app/controllers/post_comments_controller.rb:30:in `set_post_comment'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.7ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:45:44 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hpFfWe0LFyjaliYXdKgPCTU3bJ7Ozd71ZksOz3USogsOaeZjRh7xnDxJf4IFG860hCLlqMqZcR/doM1VCutpuw==", "post_comment"=>{"name"=>"dddddddddd", "email"=>"s@gmail.com", "body"=>"ddddddddddddddd"}, "commit"=>"Post Comment"}
+  [1m[36mPostComment Load (0.1ms)[0m  [1m[34mSELECT  "post_comments".* FROM "post_comments" WHERE "post_comments"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find PostComment with 'id'=):
+  
+app/controllers/post_comments_controller.rb:30:in `set_post_comment'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.7ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:46:34 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hpFfWe0LFyjaliYXdKgPCTU3bJ7Ozd71ZksOz3USogsOaeZjRh7xnDxJf4IFG860hCLlqMqZcR/doM1VCutpuw==", "post_comment"=>{"name"=>"dddddddddd", "email"=>"s@gmail.com", "body"=>"ddddddddddddddd"}, "commit"=>"Post Comment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/post_comments_controller.rb:12:in `create'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.2ms)
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:47:02 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hpFfWe0LFyjaliYXdKgPCTU3bJ7Ozd71ZksOz3USogsOaeZjRh7xnDxJf4IFG860hCLlqMqZcR/doM1VCutpuw==", "post_comment"=>{"name"=>"dddddddddd", "email"=>"s@gmail.com", "body"=>"ddddddddddddddd"}, "commit"=>"Post Comment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 14:47:02 +0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered static_pages/home.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-03-08 14:47:07 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (26.6ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 98ms (Views: 89.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-03-08 14:48:03 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 112ms (Views: 85.5ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:49:12 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GY7DIKqgfzverrwmdnefcHG7ywfFLZMm2dbiaNrpbeqRdnoaAbWZjzhx5bMHxF7NwK5CMcF5PMxiPSHypRCmWg==", "post_comment"=>{"name"=>"", "email"=>"", "body"=>""}, "commit"=>"Post Comment"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 14:49:12 +0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered static_pages/home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 63ms (Views: 61.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2017-03-08 14:49:44 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (18.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 118ms (Views: 83.0ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:49:58 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OPt89RvxBQg15JM2V0iau6gXgP398Q72U/cZK63eakOwA8XPsOTjvNM7yqMm+1sGGQIJy/mloRzoHNqx0ieh8w==", "post_comment"=>{"name"=>"nn", "email"=>"s@gmail.com", "body"=>"hshhshs"}, "commit"=>"Post Comment"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 14:49:58 +0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 14:59:06 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered static_pages/home.html.erb within layouts/application (17.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (5.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 672ms (Views: 646.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2017-03-08 14:59:21 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (567.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 674ms (Views: 626.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/post_comments" for 127.0.0.1 at 2017-03-08 14:59:37 +0300
+Processing by PostCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YnUSzwnrOOXF44xVpfEMa//gfD939VI9viNNpd23Hyfqjav1ov7eUSM81cDUQs3WTvX1CXOh/dcFyI4/ok7Ulw==", "post_comment"=>{"name"=>"bb", "email"=>"s@gmail.com", "body"=>"ss"}, "commit"=>"Post Comment"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 14:59:37 +0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered static_pages/home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 61.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 16:32:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mPost Load (14.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered static_pages/home.html.erb within layouts/application (50.2ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (8.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 1855ms (Views: 1706.4ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2017-03-08 16:33:06 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (1116.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1564ms (Views: 1188.0ms | ActiveRecord: 2.6ms)
+
+
