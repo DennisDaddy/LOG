@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   
 
+  resources :comments
   get 'categories/index'
 
   get 'categories/edit'
