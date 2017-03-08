@@ -15,11 +15,11 @@ data: { confirm: "You sure?" } %> <br><br>
 <hr>
 <h3>Add Comment</h3>
 
-<%= form_for @post_comment do |f| %>
+<%= form_for(@comment) do |f| %>
        <p>
 		<%= f.label :name %>
    	    <%= f.text_field :name %>
-   	    </p>
+   	    </pd
    	    <p>
 		<%= f.label :email %>
    	    <%= f.text_field :email %>
