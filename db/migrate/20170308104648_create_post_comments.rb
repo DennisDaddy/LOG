@@ -8,5 +8,6 @@ class CreatePostComments < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    add_index :post_comments, :post_id
   end
 end
