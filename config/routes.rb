@@ -2,13 +2,7 @@ Rails.application.routes.draw do
 
   
 
-  get 'categories/index'
-
-  get 'categories/edit'
-
-  get 'categories/new'
-
-  get 'categories/show'
+  
 
   root 'static_pages#home'
 
@@ -27,6 +21,7 @@ Rails.application.routes.draw do
    resources :password_resets,     only: [:new, :create, :edit, :update]
    resources :posts
    resources :categories
+   resources  :comments
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
