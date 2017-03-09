@@ -19775,3 +19775,68 @@ app/views/categories/new.html.erb:2:in `_app_views_categories_new_html_erb___205
   Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.4ms)
+Started GET "/categories/new" for 127.0.0.1 at 2017-03-09 15:52:33 +0300
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (19.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 89ms (Views: 78.2ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2017-03-09 15:52:41 +0300
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VFGVPa6gBwxhs+X7oVMfj4FbCdV+JT1V0heFxzYk0VfGU3tLbGUgvgfKVT3PZ6PxY7fotVMQbZ6n/dWP9edtSA==", "category"=>{"name"=>"yaya"}, "commit"=>"Add Category"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.6ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'name' for Post.):
+  
+app/controllers/categories_controller.rb:15:in `create'
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/kings/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.5ms)
+Started POST "/categories" for 127.0.0.1 at 2017-03-09 15:53:05 +0300
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VFGVPa6gBwxhs+X7oVMfj4FbCdV+JT1V0heFxzYk0VfGU3tLbGUgvgfKVT3PZ6PxY7fotVMQbZ6n/dWP9edtSA==", "category"=>{"name"=>"yaya"}, "commit"=>"Add Category"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "yaya"], ["created_at", 2017-03-09 12:53:05 UTC], ["updated_at", 2017-03-09 12:53:05 UTC]]
+  [1m[35m (118.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 138ms (ActiveRecord: 120.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-03-09 15:53:05 +0300
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (20.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 91ms (Views: 87.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2017-03-09 15:53:10 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = ?[0m  [["category_id", 5]]
+  Rendered categories/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 82ms (Views: 69.8ms | ActiveRecord: 1.7ms)
+
+
