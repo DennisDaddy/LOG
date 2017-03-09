@@ -28,6 +28,24 @@ class CategoriesController < ApplicationController
   	@posts = @category.posts
   end
 
+  def edit
+     @category = Category.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:id])
+
+    if @category.update_attributes(category_params)
+    
+    redirect_to post_path, :notice => "Your category has been updated"
+
+    else
+
+    render 'edit'
+
+    end
+  end
+
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
