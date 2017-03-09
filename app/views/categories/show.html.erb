@@ -2,8 +2,7 @@
 <h1><%= @category.name %></h1>
 <% @posts.each do |post| %>
 
-<h3><%= link_to  post.title, post %> </h3><%= link_to "Edit", edit_category_path %> |<%= link_to "Delete", category, method: :delete,
-data: { confirm: "You sure?" } %> 
+<h3><%= link_to  post.title, post %> </h3> 
 <p><%= post.body %></p>
 <% end %> 
 
