@@ -1,11 +1,14 @@
-<h2>My Blog</h2>
-
-<% @posts.each do |post| %>
-<h3><%= link_to post.title, post %> </h3>
-<h6><%= post.body %> </h6>
-
-<% end %> 
-<hr>
 
 
-<%= link_to "Add New Post", new_post_path %> 
+<div class="center jumbotron">
+  <h1>Welcome to Posts App</h1>
+
+  <h2>
+    This is Amazing App
+  </h2>
+
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+
+
+            
