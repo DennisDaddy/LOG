@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+
   def index
   	@categories = Category.all
   end
@@ -13,9 +14,11 @@ class CategoriesController < ApplicationController
 
   def create
      @category = Category.new(category_params)
-     if @category.save
-     
+
+     if @category.save     
       flash[:success] = "Your category has been saved"
+      redirect_to categories_path
+
     else
       render 'new'
      end
