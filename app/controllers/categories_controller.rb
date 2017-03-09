@@ -36,8 +36,12 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
 
     if @category.update_attributes(category_params)
+
+       flash[:success] = "Category successfuly updated!!"
+
+
     
-    redirect_to post_path, :notice => "Your category has been updated"
+    redirect_to categories_path
 
     else
 
